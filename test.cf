@@ -1,0 +1,20 @@
+Char_a. Char ::= "a" ;
+Char_b. Char ::= "b" ;
+
+_ . Stm ::= Stm ";" ;
+
+[]. [Def] ::= ;
+(:). [Def] ::= Def ";" [Def] ;
+(:[]) . [Foo] ::= bar ;
+
+token UIdent (upper (letter | digit | '_')*) ;
+
+-- hello TODO
+{- a TODO b -}
+position token PIdent (letter (letter|digit|'_'|'\'')*) ;
+
+comment "/\n \"/" ;
+comment "/*" "*/" 'a' 023 ;
+
+internal EVarT. Exp ::= "(" Ident ":" Type ")";
+
