@@ -7,6 +7,14 @@ if exists("b:current_syntax")
 "  finish
 endif
 
+" operators
+
+syn match bnfcOperator /*\|+\|?\||\|::=/
+hi def link bnfcOperator Operator
+
+syn match bnfcLabel /[^ ]\+ *\./
+hi def link bnfcLabel Identifier
+
 
 " comment
 syn keyword bnfcTodo FIXME NOTE NOTES TODO XXX contained
@@ -42,13 +50,6 @@ hi def link bnfcCharacter Character
 syn match bnfcInteger /\d\+/
 hi def link bnfcInteger Number
 
-" operators
-
-syn match bnfcOperator /*\|+\|?\||\|::=/
-hi def link bnfcOperator Operator
-
-syn match bnfcLabel /[^ ]\+ *\./
-hi def link bnfcLabel Identifier
 
 
 let b:current_syntax = "bnfc"

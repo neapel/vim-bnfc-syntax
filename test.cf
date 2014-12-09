@@ -18,3 +18,4 @@ comment "/*" "*/" 'a' 023 ;
 
 internal EVarT. Exp ::= "(" Ident ":" Type ")";
 
+Foo. Bar ::= Baz "." meh ; -- ff
